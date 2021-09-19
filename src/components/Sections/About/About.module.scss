@@ -1,0 +1,97 @@
+.about {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-text-alt);
+	background: var(--color-default);
+	overflow: hidden;
+
+	.img-wrapper {
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h1 {
+		font-size: 2rem;
+		font-weight: 400;
+	}
+
+	p {
+		position: relative;
+		color: var(--color-accent);
+	}
+
+	p::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: var(--color-default);
+		border-left: 2px solid var(--color-accent);
+		animation: typing 5.5s steps(12) infinite;
+	}
+
+	.socials {
+		margin-top: 0.25rem;
+		a i {
+			margin: 0.5rem;
+			color: var(--color-text-alt);
+			font-size: 1.25rem;
+		}
+	}
+
+	.about--controls {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.about-btn {
+			width: 50%;
+			height: 4rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+			background: var(--color-default);
+			border-width: 1px;
+			border-style: solid;
+			border-image: linear-gradient(to bottom, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+			border-top: none;
+			border-left: none;
+			border-bottom: none;
+
+			&--left {
+				border-width: 1px;
+				border-style: solid;
+				border-image: linear-gradient(to right, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+				border-left: none;
+				border-bottom: none;
+			}
+
+			&--right {
+				border-width: 1px;
+				border-style: solid;
+				border-image: linear-gradient(to left, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+				border-left: none;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+@keyframes typing {
+	0% {
+		left: 0;
+	}
+	40%,
+	100% {
+		left: calc(100% + 2px);
+	}
+}

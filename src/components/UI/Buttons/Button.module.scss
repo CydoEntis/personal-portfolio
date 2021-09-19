@@ -1,0 +1,16 @@
+.btn {
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	color: var(--color-text-alt);
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
+}

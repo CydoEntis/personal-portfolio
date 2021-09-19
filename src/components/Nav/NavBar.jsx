@@ -5,9 +5,9 @@ import NavMenu from "./NavMenu";
 
 const Navigation = () => {
 	return (
-		<div className={styles.nav}>
+		<nav className={styles.nav}>
 			<NavMenu />
-		</div>
+		</nav>
 	);
 };
 
