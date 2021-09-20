@@ -6,13 +6,15 @@ import styles from "./About.module.scss";
 const About = () => {
 	return (
 		<section className={styles.about}>
-			<div className={styles["img-wrapper"]}>
+			{/* <div className={styles["img-wrapper"]}>
 				<img
 					src="https://img.favpng.com/9/22/13/vector-graphics-computer-programming-computer-software-software-development-software-developer-png-favpng-tggx34aeeRVZwvM3KpgYiC6nK.jpg"
 					alt=""
 				/>
-			</div>
-			<h1>Cody Stine</h1>
+			</div> */}
+			<h1>
+				<span>&lt;</span>Cody Stine<span>/&gt;</span>
+			</h1>
 			<p>Web Developer</p>
 			<div className={styles.socials}>
 				<a href="https://github.com/CydoEntis">

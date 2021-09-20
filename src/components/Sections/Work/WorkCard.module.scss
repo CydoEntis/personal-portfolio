@@ -1,0 +1,27 @@
+.projects {
+	background-color: var(--color-default);
+	padding: 1rem;
+}
+
+.img-wrapper {
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+}
+
+h3 {
+	text-align: center;
+	color: var(--color-text-alt);
+}
+
+.project-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-text-alt);
+	p {
+		margin: 0.25rem 0.5rem;
+	}
+}
