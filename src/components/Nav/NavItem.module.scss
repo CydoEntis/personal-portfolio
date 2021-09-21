@@ -30,3 +30,23 @@
 		transition: all 300ms ease-in-out;
 	}
 }
+
+@media (min-width: 768px) {
+	.nav-item {
+		width: 64px;
+		height: 64px;
+		border: none;
+	}
+}
+
+@media (min-width: 2560px) {
+	.nav-item {
+		width: 128px;
+		height: 128px;
+
+		&--text {
+			font-size: 1.15rem;
+			text-transform: uppercase;
+		}
+	}
+}

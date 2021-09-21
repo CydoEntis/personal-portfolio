@@ -1,0 +1,15 @@
+@media (min-width: 1024px) {
+	.project-list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		border: none;
+	}
+}
+
+// @media (min-width: 2056px) {
+// 	.project-list {
+// 		flex-wrap: wrap;
+// 		border: none;
+// 	}
+// }

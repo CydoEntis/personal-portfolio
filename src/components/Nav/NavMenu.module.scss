@@ -2,3 +2,19 @@
 	display: flex;
 	justify-content: center;
 }
+
+@media (min-width: 768px) {
+	.nav-menu {
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-content: space-between;
+	}
+}
+
+@media (min-width: 2560px) {
+	.nav-item {
+		width: 128px;
+		height: 128px;
+	}
+}

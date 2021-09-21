@@ -18,6 +18,20 @@ const projectData = [
 		codeLink: "https://github.com/CydoEntis/my-amiibos",
 		liveLink: "https://my-amiibos.vercel.app/",
 	},
+	{
+		id: 3,
+		img: "https://github.com/CydoEntis/tapgames/raw/main/src/assets/tap-games.png",
+		title: "TapGames",
+		codeLink: "https://github.com/CydoEntis/tapgames",
+		liveLink: "https://tapgames.vercel.app/",
+	},
+	{
+		id: 4,
+		img: "https://github.com/CydoEntis/my-amiibos/raw/main/read-me-images/homepage.png",
+		title: "MyAmiibos",
+		codeLink: "https://github.com/CydoEntis/my-amiibos",
+		liveLink: "https://my-amiibos.vercel.app/",
+	},
 ];
 
 const projects = projectData.map((project) => (

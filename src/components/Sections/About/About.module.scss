@@ -1,17 +1,11 @@
 .about {
+	position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-
-	.img-wrapper {
-		width: 100%;
-		img {
-			width: 100%;
-		}
-	}
 
 	h1 {
 		span {
@@ -30,7 +24,7 @@
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background: var(--color-default);
+		background: var(--color-background);
 		border-left: 2px solid var(--color-accent);
 		animation: typing 5.5s steps(12) infinite;
 	}
@@ -52,6 +46,7 @@
 			height: 4rem;
 			font-size: 0.9rem;
 			font-weight: 500;
+			background-color: var(--color-background);
 
 			border-width: 1px;
 			border-style: solid;
@@ -86,5 +81,23 @@
 	40%,
 	100% {
 		left: calc(100% + 2px);
+	}
+}
+
+@media (min-width: 768px) {
+	.about {
+		height: 50vh;
+	}
+}
+
+@media (min-width: 2560px) {
+	.about {
+		.about--controls {
+			.about-btn {
+				width: 50%;
+				height: 5.25rem;
+				font-size: 1.25rem;
+			}
+		}
 	}
 }

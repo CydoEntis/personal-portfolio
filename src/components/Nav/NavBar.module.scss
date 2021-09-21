@@ -9,3 +9,30 @@
 	border-right: none;
 	z-index: 1000;
 }
+
+@media (min-width: 768px) {
+	.nav {
+		width: 75px;
+		height: 300px;
+		left: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		border-radius: 0.25rem;
+	}
+}
+
+@media (min-width: 1440px) {
+	.nav {
+		left: 8%;
+	}
+}
+
+@media (min-width: 2560px) {
+	.nav {
+		width: 124px;
+		height: 600px;
+		left: 8%;
+	}
+}
