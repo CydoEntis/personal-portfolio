@@ -1,0 +1,16 @@
+.section-title {
+	padding: 1rem;
+	border-width: 1px;
+	border-style: solid;
+	border-image: linear-gradient(to right, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	font-weight: 600;
+	font-size: 1.25rem;
+
+	span {
+		text-transform: uppercase;
+		color: var(--color-accent);
+	}
+}
