@@ -13,7 +13,7 @@ const About = () => {
 				/>
 			</div> */}
 			<h1>
-				<span>&lt;</span>Cody Stine<span>/&gt;</span>
+				<span>&lt;/</span>Cody Stine<span>&gt;</span>
 			</h1>
 			<p>Web Developer</p>
 			<div className={styles.socials}>
