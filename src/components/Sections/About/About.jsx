@@ -1,6 +1,6 @@
 import React from "react";
+import { Link as ReactLink } from "react-scroll";
 import Link from "../../UI/Links/Link";
-import Button from "../../UI/Buttons/Button";
 
 import styles from "./About.module.scss";
 
@@ -19,12 +19,21 @@ const About = () => {
 				/>
 			</div>
 			<div className={styles["about--controls"]}>
-				<Button className={`${styles["about-btn"]} ${styles["about-btn--right"]}`}>
+				<a
+					href="../../../assets/Cody-Stine-Resume.pdf"
+					download="resume"
+					className={`${styles["about-btn"]} ${styles["about-btn--border"]}`}>
 					Download Cv
-				</Button>
-				<Button className={`${styles["about-btn"]} ${styles["about-btn--left"]}`}>
-					Contact Me
-				</Button>
+				</a>
+				<ReactLink
+					className={styles["about-btn"]}
+					to={"contact"}
+					spy={true}
+					smooth={true}
+					offset={-64}
+					duration={600}>
+					Contact
+				</ReactLink>
 			</div>
 		</section>
 	);
