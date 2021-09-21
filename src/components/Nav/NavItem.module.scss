@@ -13,6 +13,8 @@
 	border-top: none;
 	border-left: none;
 	border-bottom: none;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
 
 	&:last-child {
 		border-right: none;
@@ -21,6 +23,13 @@
 	&--text {
 		font-size: 0.85rem;
 		text-transform: uppercase;
+	}
+
+	&:hover {
+		i {
+			transition: all 300ms ease-in-out;
+			color: var(--color-accent);
+		}
 	}
 }
 

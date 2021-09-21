@@ -46,6 +46,14 @@
 			font-size: 1.25rem;
 			color: var(--color-primary);
 		}
+
+		&:hover {
+			color: var(--color-accent);
+
+			i {
+				color: var(--color-accent);
+			}
+		}
 	}
 }
 

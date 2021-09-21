@@ -1,4 +1,5 @@
 .project {
+	position: relative;
 	padding: 1rem;
 	border-width: 1px;
 	border-style: solid;
@@ -17,7 +18,13 @@
 }
 
 h3 {
+	position: absolute;
+	top: 3%;
+	left: -2%;
 	text-align: center;
+	background: var(--color-background);
+	border: 1px solid var(--color-accent);
+	padding: 0.25rem;
 }
 
 .project-links {
