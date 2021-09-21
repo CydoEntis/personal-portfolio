@@ -5,7 +5,7 @@ import styles from "./About.module.scss";
 
 const About = () => {
 	return (
-		<section className={styles.about}>
+		<section id="about" className={styles.about}>
 			{/* <div className={styles["img-wrapper"]}>
 				<img
 					src="https://img.favpng.com/9/22/13/vector-graphics-computer-programming-computer-software-software-development-software-developer-png-favpng-tggx34aeeRVZwvM3KpgYiC6nK.jpg"
@@ -18,7 +18,7 @@ const About = () => {
 			<p>Web Developer</p>
 			<div className={styles.socials}>
 				<a href="https://github.com/CydoEntis">
-					<i class="bx bxl-github"></i>
+					<i className="bx bxl-github"></i>
 				</a>
 				<a href="https://www.linkedin.com/in/cody-stine-06857814a/">
 					<i className="bx bxl-linkedin"></i>
