@@ -7,6 +7,7 @@ const Resume = () => {
 	return (
 		<section id="resume" className={styles.resume}>
 			<SectionTitle title={"resume"} />
+			TODO: ADD THE RESUME!
 		</section>
 	);
 };
