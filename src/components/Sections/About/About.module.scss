@@ -48,27 +48,31 @@
 			font-weight: 500;
 			background-color: var(--color-background);
 
-			border-width: 1px;
-			border-style: solid;
-			border-image: linear-gradient(to bottom, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
-			border-top: none;
-			border-left: none;
-			border-bottom: none;
+			border-top: 1px solid var(--color-secondary);
+			// border-width: 1px;
+			// border-style: solid;
+			// border-image: linear-gradient(to bottom, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+			// border-top: none;
+			// border-left: none;
+			// border-bottom: none;
 
 			&--left {
-				border-width: 1px;
-				border-style: solid;
-				border-image: linear-gradient(to right, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
-				border-left: none;
-				border-bottom: none;
+				border-left: 1px solid var(--color-secondary);
+
+				// border-width: 1px;
+				// border-style: solid;
+				// border-image: linear-gradient(to right, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+				// border-left: none;
+				// border-bottom: none;
 			}
 
 			&--right {
-				border-width: 1px;
-				border-style: solid;
-				border-image: linear-gradient(to left, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
-				border-left: none;
-				border-bottom: none;
+				// border-right: 1px solid var(--color-secondary);
+				// border-width: 1px;
+				// border-style: solid;
+				// border-image: linear-gradient(to left, var(--color-secondary), rgba(0, 0, 0, 0)) 1;
+				// border-left: none;
+				// border-bottom: none;
 			}
 		}
 	}
