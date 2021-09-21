@@ -1,9 +1,4 @@
 .nav-menu {
 	display: flex;
 	justify-content: center;
-
-	.active {
-		color: var(--color-accent);
-		transition: all 300ms ease-in-out;
-	}
 }

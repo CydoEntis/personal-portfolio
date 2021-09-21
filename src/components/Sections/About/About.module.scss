@@ -4,32 +4,24 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: var(--color-text-alt);
-	background: var(--color-default);
 	overflow: hidden;
 
 	.img-wrapper {
 		width: 100%;
-		// background: #fff;
 		img {
 			width: 100%;
 		}
 	}
 
 	h1 {
-		font-size: 2rem;
-		font-weight: 400;
-
 		span {
 			color: var(--color-accent);
-			font-size: 2rem;
 			font-weight: 300;
 		}
 	}
 
 	p {
 		position: relative;
-		color: var(--color-accent);
 	}
 
 	p::after {
@@ -45,11 +37,6 @@
 
 	.socials {
 		margin-top: 0.25rem;
-		a i {
-			margin: 0.5rem;
-			color: var(--color-text-alt);
-			font-size: 1.25rem;
-		}
 	}
 
 	.about--controls {
@@ -65,7 +52,7 @@
 			height: 4rem;
 			font-size: 0.9rem;
 			font-weight: 500;
-			background: var(--color-default);
+
 			border-width: 1px;
 			border-style: solid;
 			border-image: linear-gradient(to bottom, var(--color-secondary), rgba(0, 0, 0, 0)) 1;

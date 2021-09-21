@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "../../UI/Links/Link";
 import Button from "../../UI/Buttons/Button";
 
 import styles from "./About.module.scss";
@@ -11,12 +12,11 @@ const About = () => {
 			</h1>
 			<p>Web Developer</p>
 			<div className={styles.socials}>
-				<a href="https://github.com/CydoEntis">
-					<i className="bx bxl-github"></i>
-				</a>
-				<a href="https://www.linkedin.com/in/cody-stine-06857814a/">
-					<i className="bx bxl-linkedin"></i>
-				</a>
+				<Link className={"bxl-github"} link={"https://github.com/CydoEntis"} />{" "}
+				<Link
+					className={"bxl-linkedin"}
+					link={"https://www.linkedin.com/in/cody-stine-06857814a/"}
+				/>
 			</div>
 			<div className={styles["about--controls"]}>
 				<Button className={`${styles["about-btn"]} ${styles["about-btn--right"]}`}>

@@ -8,13 +8,12 @@
 }
 
 :root {
-	--color-primary: #6ec1e4;
-	--color-secondary: #54595f;
-	--color-default: #fff;
-	--color-text: #7a7a7a;
+	--color-background: #fff;
+	--color-primary: #323232;
+	--color-secondary: #999;
+	--color-tertiary: #7a7a7a;
 	--color-accent: #61ce70;
-	--color-text-alt: #323232;
-	--color-links: #999;
+	--color-accent-alt: #6ec1e4;
 	--primary-font-family: "Poppins";
 	// --secondary-font-family: "Roboto"; Add Font Later
 }
@@ -22,5 +21,40 @@
 body {
 	height: 100vh;
 	background: #50a3a2;
-	background: linear-gradient(to bottom right, var(--color-primary) 0%, var(--color-accent) 100%);
+	background: linear-gradient(
+		to bottom right,
+		var(--color-accent-elt) 0%,
+		var(--color-accent) 100%
+	);
+}
+
+nav {
+	background-color: var(--color-background);
+}
+
+section {
+	background-color: var(--color-background);
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+h3 {
+	color: var(--color-text-alt);
+}
+
+p {
+	color: var(--color-accent);
+}
+
+i {
+	color: var(--color-tertiary);
+	font-size: 1.4rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-tertiary);
 }
