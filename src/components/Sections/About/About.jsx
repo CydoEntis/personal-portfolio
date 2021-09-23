@@ -2,6 +2,8 @@ import React from "react";
 import { Link as ReactLink } from "react-scroll";
 import Link from "../../UI/Links/Link";
 
+import resume from "../../../assets/Cody-Stine-Resume.pdf";
+
 import styles from "./About.module.scss";
 
 const About = () => {
@@ -20,8 +22,8 @@ const About = () => {
 			</div>
 			<div className={styles["about--controls"]}>
 				<a
-					href="../../../assets/Cody-Stine-Resume.pdf"
-					download="resume"
+					href={resume}
+					download
 					className={`${styles["about-btn"]} ${styles["about-btn--border"]}`}>
 					Download Cv
 				</a>
