@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "emailjs-com";
 
 import SectionTitle from "../../UI/Titles/SectionTitle";
 import Error from "../../Errors/Error";
@@ -54,6 +55,13 @@ const Contact = () => {
 
 		if (!formIsValid) return;
 
+		emailjs
+			.sendForm("service_0cyxpne", "template_098ehfo", e.target, "user_CisqUqkbbdBKLErxv4yts")
+			.then((res) => {
+				console.log(res);
+			})
+			.catch((e) => console.log(e.message));
+
 		resetForm();
 	};
 
@@ -67,6 +75,7 @@ const Contact = () => {
 					onChange={fullNameChangeHandler}
 					onBlur={fullNameBlurHandler}
 					value={fullNameValue}
+					name="fullname"
 				/>
 				{fullNameHasError && <Error message={"Please enter a first and last name."} />}
 				<input
@@ -75,6 +84,7 @@ const Contact = () => {
 					onChange={emailChangeHandler}
 					onBlur={emailBlurHandler}
 					value={emailValue}
+					name="email"
 				/>
 				{emailHasError && <Error message={"Please enter a valid email address."} />}
 				<textarea
@@ -82,9 +92,10 @@ const Contact = () => {
 					onChange={messageChangeHandler}
 					onBlur={messageBlurHandler}
 					value={messageValue}
+					name="message"
 				/>
 				{messageHasError && <Error message={"Please don't leave the message field blank."} />}
-				<button>
+				<button type="submit">
 					Send Message <i className="bx bx-send"></i>
 				</button>
 			</form>
