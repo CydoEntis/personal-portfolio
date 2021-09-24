@@ -3,31 +3,20 @@ import ProjectCard from "./ProjectCard";
 
 import styles from "./ProjectList.module.scss";
 
+import tapgames from "../../../assets/images/tapgames.png";
+import amiibo from "../../../assets/images/amiibo.png";
+
 const projectData = [
 	{
 		id: 1,
-		img: "https://github.com/CydoEntis/tapgames/raw/main/src/assets/tap-games.png",
+		img: tapgames,
 		title: "TapGames",
 		codeLink: "https://github.com/CydoEntis/tapgames",
 		liveLink: "https://tapgames.vercel.app/",
 	},
 	{
 		id: 2,
-		img: "https://github.com/CydoEntis/my-amiibos/raw/main/read-me-images/homepage.png",
-		title: "MyAmiibos",
-		codeLink: "https://github.com/CydoEntis/my-amiibos",
-		liveLink: "https://my-amiibos.vercel.app/",
-	},
-	{
-		id: 3,
-		img: "https://github.com/CydoEntis/tapgames/raw/main/src/assets/tap-games.png",
-		title: "TapGames",
-		codeLink: "https://github.com/CydoEntis/tapgames",
-		liveLink: "https://tapgames.vercel.app/",
-	},
-	{
-		id: 4,
-		img: "https://github.com/CydoEntis/my-amiibos/raw/main/read-me-images/homepage.png",
+		img: amiibo,
 		title: "MyAmiibos",
 		codeLink: "https://github.com/CydoEntis/my-amiibos",
 		liveLink: "https://my-amiibos.vercel.app/",
