@@ -14,6 +14,7 @@ const isEmail = (value) => value.includes('@');
 const Contact = () => {
 	const [didSend, setDidSend] = useState(false);
 	const [formEmpty, setFormEmpty] = useState(false);
+	const [messageNotSent, setMessageNotSent] = useState(false);
 
 	const {
 		value: fullNameValue,
@@ -66,8 +67,18 @@ const Contact = () => {
 			.sendForm('service_0cyxpne', 'template_098ehfo', e.target, 'user_CisqUqkbbdBKLErxv4yts')
 			.then((res) => {
 				setDidSend(true);
+
+				setTimeout(() => {
+					setDidSend(false);
+				}, 1500);
 			})
-			.catch((e) => console.log(e.message));
+			.catch((e) => {
+				setMessageNotSent(true);
+
+				setTimeout(() => {
+					setMessageNotSent(false);
+				}, 1500);
+			});
 
 		resetForm();
 	};
@@ -107,6 +118,7 @@ const Contact = () => {
 					Send Message <i className="bx bx-send"></i>
 				</button>
 				{didSend && <MessageSent>Your message has been sent</MessageSent>}
+				{messageNotSent && <Error message={'An error occured. Message was not sent.'}></Error>}
 			</form>
 		</section>
 	);
