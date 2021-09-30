@@ -16,7 +16,7 @@ const Contact = () => {
 	const [formEmpty, setFormEmpty] = useState(false);
 	const [messageNotSent, setMessageNotSent] = useState(false);
 
-	const {
+	let {
 		value: fullNameValue,
 		isValid: fullNameIsValid,
 		hasError: fullNameHasError,
@@ -60,6 +60,9 @@ const Contact = () => {
 
 		if (!formIsValid) {
 			setFormEmpty(true);
+			setTimeout(() => {
+				setFormEmpty(false);
+			}, 1500);
 			return;
 		}
 
@@ -113,10 +116,10 @@ const Contact = () => {
 					name="message"
 				/>
 				{messageHasError && <Error message={"Please don't leave the message field blank."} />}
-				{formEmpty && <Error message={'Please fill out entire form.'} />}
 				<button type="submit">
 					Send Message <i className="bx bx-send"></i>
 				</button>
+				{formEmpty && <Error message={'Please fill out entire form.'} />}
 				{didSend && <MessageSent>Your message has been sent</MessageSent>}
 				{messageNotSent && <Error message={'An error occured. Message was not sent.'}></Error>}
 			</form>
