@@ -1,16 +1,20 @@
-import React from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-import SectionTitle from "../../UI/Titles/SectionTitle";
-import Error from "../../Errors/Error";
-import useInput from "../../../hooks/use-input";
+import SectionTitle from '../../UI/Titles/SectionTitle';
+import Error from '../../Errors/Error';
+import MessageSent from './MessageSent';
+import useInput from '../../../hooks/use-input';
 
-import styles from "./Contact.module.scss";
+import styles from './Contact.module.scss';
 
-const isNotEmpty = (value) => value.trim() !== "";
-const isEmail = (value) => value.includes("@");
+const isNotEmpty = (value) => value.trim() !== '';
+const isEmail = (value) => value.includes('@');
 
 const Contact = () => {
+	const [didSend, setDidSend] = useState(false);
+	const [formEmpty, setFormEmpty] = useState(false);
+
 	const {
 		value: fullNameValue,
 		isValid: fullNameIsValid,
@@ -53,12 +57,15 @@ const Contact = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 
-		if (!formIsValid) return;
+		if (!formIsValid) {
+			setFormEmpty(true);
+			return;
+		}
 
 		emailjs
-			.sendForm("service_0cyxpne", "template_098ehfo", e.target, "user_CisqUqkbbdBKLErxv4yts")
+			.sendForm('service_0cyxpne', 'template_098ehfo', e.target, 'user_CisqUqkbbdBKLErxv4yts')
 			.then((res) => {
-				console.log(res);
+				setDidSend(true);
 			})
 			.catch((e) => console.log(e.message));
 
@@ -67,7 +74,7 @@ const Contact = () => {
 
 	return (
 		<section id="contact" className={styles.contact}>
-			<SectionTitle title={"contact"} />
+			<SectionTitle title={'contact'} />
 			<form onSubmit={submitHandler}>
 				<input
 					type="text"
@@ -77,7 +84,7 @@ const Contact = () => {
 					value={fullNameValue}
 					name="fullname"
 				/>
-				{fullNameHasError && <Error message={"Please enter a first and last name."} />}
+				{fullNameHasError && <Error message={'Please enter a first and last name.'} />}
 				<input
 					type="email"
 					placeholder="Email Address"
@@ -86,7 +93,7 @@ const Contact = () => {
 					value={emailValue}
 					name="email"
 				/>
-				{emailHasError && <Error message={"Please enter a valid email address."} />}
+				{emailHasError && <Error message={'Please enter a valid email address.'} />}
 				<textarea
 					placeholder="Your Message"
 					onChange={messageChangeHandler}
@@ -95,9 +102,11 @@ const Contact = () => {
 					name="message"
 				/>
 				{messageHasError && <Error message={"Please don't leave the message field blank."} />}
+				{formEmpty && <Error message={'Please fill out entire form.'} />}
 				<button type="submit">
 					Send Message <i className="bx bx-send"></i>
 				</button>
+				{didSend && <MessageSent>Your message has been sent</MessageSent>}
 			</form>
 		</section>
 	);
