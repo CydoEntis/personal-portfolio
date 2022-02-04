@@ -7,6 +7,15 @@ const WorkHistory = () => {
 	const workData = [
 		{
 			id: 1,
+			startDate: 'Dec 2021',
+			endDate: 'Current Employer',
+			title: 'Software Developer',
+			company: 'Bay-masteR',
+			description:
+				"Build and optimize secure web pages for evolving business needs utilizing technologies such as C#, Asp.net, Jquery and Kendo UI. While providing continued support to customers",
+		},
+		{
+			id: 2,
 			startDate: 'Jan 2020',
 			endDate: 'Dec 2020',
 			title: 'Computer Science Tutor',
@@ -15,7 +24,7 @@ const WorkHistory = () => {
 				"Find ways to improve students' academic performance relating to computer science topics.",
 		},
 		{
-			id: 2,
+			id: 3,
 			startDate: 'May 2017',
 			endDate: 'Sept 2020',
 			title: 'Electrical Apprentice',
@@ -24,7 +33,7 @@ const WorkHistory = () => {
 				'Install diagnose and repair electrical equipment for both new and old construction in residential and commerical settings..',
 		},
 		{
-			id: 3,
+			id: 4,
 			startDate: 'Sept 2017',
 			endDate: 'May 2018',
 			title: 'HVAC Technician',
