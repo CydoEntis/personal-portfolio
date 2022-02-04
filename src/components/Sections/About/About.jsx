@@ -17,7 +17,7 @@ const About = () => {
 				<Link className={'bxl-github'} link={'https://github.com/CydoEntis'} />{' '}
 				<Link
 					className={'bxl-linkedin'}
-					link={'https://www.linkedin.com/in/cody-stine-06857814a/'}
+					link={'https://www.linkedin.com/in/cody-stine-dev/'}
 				/>
 			</div>
 			<div className={styles['about--controls']}>
